@@ -2,6 +2,8 @@
 {% load static %}
 <html lang="en">
 <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <title>Shouganai</title>
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
@@ -9,8 +11,14 @@
 
 </head>
 <body>
+<div>
 <header>
+    <div class="nav-left">
     <h1><a href="{% url 'home' %}">Shouganai</a></h1>
+    </div>
+    <div class="nav-right">
+        <a href="{% url 'post_new' %}">+ New Blog Post</a>
+    </div>
 </header>
 <div>
     {% block content %}
