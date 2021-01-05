@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shouganai</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+<body>
+<header>
+    <h1><a href="{% url 'home' %}">Shouganai</a></h1>
+</header>
+<div>
+    {% block content %}
+    {% endblock content %}
+</div>
+
+</body>
+</html>
