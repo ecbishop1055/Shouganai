@@ -42,8 +42,8 @@ class BlogTests(TestCase):
         self.assertContains(response, 'A good title')
         self.assertTemplateUsed(response, 'post_detail.html')
 
-    #def test_get_absolute_url(self):
-        #self.assertEqual(self.post.test_get_absolute_url(), '/posts/1/')
+    def test_get_absolute_url(self):
+        self.assertEqual(self.post.get_absolute_url(), '/posts/1/')
 
     def test_post_create_view(self):
         response = self.client.post(reverse('post_new'), {
