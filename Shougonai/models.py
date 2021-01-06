@@ -1,12 +1,13 @@
 from django.db import models
 from django.urls import reverse
-from django.contrib.auth.models import AbstractUser
+
+
 
 # Create your models here.
 class Posts(models.Model):
     title = models.CharField(max_length=500)
     author = models.ForeignKey(
-        'settings.AUTH_USER_MODEL',
+        'accounts.CustomUser',
         on_delete=models.CASCADE,
     )
     body = models.TextField()
@@ -16,6 +17,3 @@ class Posts(models.Model):
 
     def get_absolute_url(self):
         return reverse('post_detail', args=[str(self.id)])
-
-class CustomUser(AbstractUser):
-    age = models.PositiveIntegerField(null=True, blank=True)

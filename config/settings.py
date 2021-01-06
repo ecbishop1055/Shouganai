@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'Shougonai'
+    'Shougonai',
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -122,4 +123,4 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [str(BASE_DIR.joinpath('static'))]
 
 
-AUTH_USER_MODEL = 'Shougonai.CustomUser'
+AUTH_USER_MODEL = 'accounts.CustomUser'
