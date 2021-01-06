@@ -6,7 +6,7 @@ from django.contrib.auth.models import AbstractUser
 class Posts(models.Model):
     title = models.CharField(max_length=500)
     author = models.ForeignKey(
-        'auth.User',
+        'settings.AUTH_USER_MODEL',
         on_delete=models.CASCADE,
     )
     body = models.TextField()
