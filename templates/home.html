@@ -9,9 +9,7 @@
         <p>{{ posts.body }}</p>
     </div>
    {% endfor %}
-{% endblock content %}
 
-{% block content %}
 {% if user.is_authenticated %}
 <p>Hi {{ user.username }}!</p>
 <p><a href="{% url 'logout' %}">Log Out</a></p>
