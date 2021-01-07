@@ -12,13 +12,14 @@ body {
 }
 
 header {
+    padding: auto;
     border-bottom: 1px solid black;
     margin-bottom: 2rem;
     display: flex;
 }
 
 .nav-left {
-    margin-right: auto;
+    align-items: center;
 }
 
 .nav-right {
