@@ -54,3 +54,8 @@ post-entry h2{
 .post-entry h2 a:hover {
     color: red;
 }
+
+.logo {
+    height: 10rem;
+    width: 15rem;
+}
