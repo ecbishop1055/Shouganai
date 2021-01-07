@@ -8,12 +8,11 @@ body {
     text-align: center;
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 18px;
-    background-color: #999;
-    
+    background-color: white;
 }
 
 header {
-    border-bottom: 1px solid #999;
+    border-bottom: 1px solid black;
     margin-bottom: 2rem;
     display: flex;
 }
@@ -33,7 +32,7 @@ header {
     /* border-style: dashed; */
     /* border-width: 5px; */
     max-width: 40rem;
-    background-color: skyblue;
+    background-color: rgb(0, 183, 255);
 }
 
 post-entry h2{
