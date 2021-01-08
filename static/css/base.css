@@ -61,3 +61,27 @@ post-entry h2{
     height: 10rem;
     width: 15rem;
 }
+
+.myButton {
+	box-shadow:inset 0px -3px 7px 0px #164d66;
+	background-color:#03243a;
+	border-radius:3px;
+	border:1px solid #ffffff;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	padding:9px 23px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #263666;
+}
+.myButton:hover {
+	background-color:#279ff0;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+        
