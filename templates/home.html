@@ -7,8 +7,16 @@
     <div class="posts-entry">
         <h2><a href="{% url 'post_detail' posts.pk %}">{{ posts.title }}</a></h2>
         <p>{{ posts.body }}</p>
+        {% endfor %}
     </div>
+    <div>
+   {% for comment in article.comments.all %}
+   <p>
+     {{ comment.author }}
+     {{ comment }} 
+   </p>
    {% endfor %}
+  </div>
 
 {% if user.is_authenticated %}
 <p>Hi {{ user.username }}! You are {{ user.age }} years old.</p>
