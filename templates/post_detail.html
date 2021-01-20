@@ -7,12 +7,12 @@
     <p>{{ posts.body }}</p>
     <h2>Comments...</h2>
     <div class="">
-    {% if not post.comments.all %}
+    {% if not posts.comments.all %}
       <a href="#">
             Add One
         </a>
         {% else %}
-            {% for comment in post.comments.all %}
+            {% for comment in posts.comments.all %}
                     <strong>{{ comment.name }}</strong>
                     <p>{{ comment.body }}</p>
             {% endfor %}        
