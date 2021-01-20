@@ -5,14 +5,14 @@
 <div class="posts-entry">
     <h2>{{ posts.title }}</h2>
     <p>{{ posts.body }}</p>
-    {% for comment in posts.comments.all %}
-        <p>
-          <span class="font-weight-bold">
-          {{ comment.author }}
-        </span>
-        {{comment}}
-        </p>
-        {% endfor %}
+    {% for comment in post.comments.all %}
+    <div class="comment">
+        <strong>{{ comment.author }}</strong>
+        <p>{{ comment }}</p>
+    </div>
+{% empty %}
+    <p>No comments here yet :(</p>
+{% endfor %}
     </div>
 
 

@@ -20,7 +20,7 @@ class Posts(models.Model):
         return reverse('post_detail', args=[str(self.id)])
 
 class Comment(models.Model):
-    article = models.ForeignKey(Posts, on_delete=models.CASCADE)
+    post = models.ForeignKey(Posts, on_delete=models.CASCADE)
     comment = models.CharField(max_length=140)
     author = models.ForeignKey(
         get_user_model(),
