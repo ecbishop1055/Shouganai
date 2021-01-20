@@ -5,15 +5,20 @@
 <div class="posts-entry">
     <h2>{{ posts.title }}</h2>
     <p>{{ posts.body }}</p>
-    {% for comment in post.comments.all %}
-    <div class="comment">
-        <strong>{{ comment.author }}</strong>
-        <p>{{ comment }}</p>
+    <h2>Comments...</h2>
+    <div class="">
+    {% if not post.comments.all %}
+      <a href="#">
+            Add One
+        </a>
+        {% else %}
+            {% for comment in post.comments.all %}
+                    <strong>{{ comment.name }}</strong>
+                    <p>{{ comment.body }}</p>
+            {% endfor %}        
+        {% endif %}
     </div>
-{% empty %}
-    <p>No comments here yet :(</p>
-{% endfor %}
-    </div>
+
 
 
 <a href="{% url 'post_edit' posts.pk %}">+ Edit Blog Post</a>
