@@ -10,14 +10,6 @@
         {% endfor %}
     </div>
     <div>
-   {% for comment in article.comments.all %}
-   <p>
-     {{ comment.author }}
-     {{ comment }} 
-   </p>
-   {% endfor %}
-  </div>
-
 {% if user.is_authenticated %}
 <p>Hi {{ user.username }}! You are {{ user.age }} years old.</p>
 <p><a href="{% url 'logout' %}">Log Out</a></p>
