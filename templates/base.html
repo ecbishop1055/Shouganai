@@ -28,7 +28,16 @@
           <a href="{% url 'post_new' %}">+ New Blog Post</a>
         </div>
       </header>
-      {% block content %} {% endblock content %}
+      {% block content %} 
+      {% for comment in posts.comments.all %}
+        <p>
+          <span class="font-weight-bold">
+          {{ comment.author }}
+        </span>
+        {{comment}}
+        </p>
+        {% endfor %}
     </div>
+      {% endblock content %}
   </body>
 </html>

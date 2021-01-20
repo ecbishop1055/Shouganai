@@ -5,7 +5,16 @@
 <div class="posts-entry">
     <h2>{{ posts.title }}</h2>
     <p>{{ posts.body }}</p>
-</div>
+    {% for comment in posts.comments.all %}
+        <p>
+          <span class="font-weight-bold">
+          {{ comment.author }}
+        </span>
+        {{comment}}
+        </p>
+        {% endfor %}
+    </div>
+
 
 <a href="{% url 'post_edit' posts.pk %}">+ Edit Blog Post</a>
 <p><a href="{% url 'post_delete' posts.pk %}">+ Delete Blog Post</a></p>
