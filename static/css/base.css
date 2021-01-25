@@ -6,6 +6,11 @@ header h1 a{
     color: red;
     text-decoration: none;
 }
+
+.form-specific {
+    color: white;
+}
+
 body {
     text-align: center;
     font-family: 'Source Sans Pro', sans-serif;
