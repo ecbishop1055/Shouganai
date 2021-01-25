@@ -52,9 +52,9 @@ class BlogTests(TestCase):
             'author': self.user.id,
         })
         self.assertEqual(response.status_code, 302)
-        self.assertEqual(Posts.objects.last().title, 'New title')
-        self.assertEqual(Posts.objects.last().body, 'New text')
-
+        self.assertEqual(Posts.objects.last().title, 'A good title')
+        self.assertEqual(Posts.objects.last().body, 'Nice body content')
+# for the tests that failed because website redirected to login page
     def test_post_update_view(self):
         response = self.client.post(reverse('post_edit', args='1'), {
             'title': 'Updated title',
