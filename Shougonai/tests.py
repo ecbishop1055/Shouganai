@@ -13,6 +13,8 @@ class BlogTests(TestCase):
             password='Secret'
         )
 
+        self.client.force_login(self.user)
+
         self.post = Posts.objects.create(
             title='A good title',
             body='Nice body content',
@@ -47,8 +49,8 @@ class BlogTests(TestCase):
 
     def test_post_create_view(self):
         response = self.client.post(reverse('post_new'), {
-            'title': 'New title',
-            'body': 'New text',
+            'title': 'A good title',
+            'body': 'Nice body content',
             'author': self.user.id,
         })
         self.assertEqual(response.status_code, 302)
