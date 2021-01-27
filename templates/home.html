@@ -1,22 +1,19 @@
 <!DOCTYPE html>
-{% extends 'base.html' %}
+{% extends 'base.html' %} {% block content %} {% for posts in object_list %}
+<div class="posts-entry">
+  <h2><a href="{% url 'post_detail' posts.pk %}">{{ posts.title }}</a></h2>
+  
+  {% endfor %}
+</div>
+<div>
+  {% if user.is_authenticated %}
+  <p>Hi {{ user.username }}! You are {{ user.age }} years old.</p>
+  <p><a href="{% url 'logout' %}">Log Out</a></p>
+  {% else %}
+  <p>You are not logged in.</p>
+  <a href="{% url 'login' %}">Log In</a>
+  <a href="{% url 'login' %}">Sign Up</a>
+  {% endif %}
+</div>
 
-{% block content %}
-
-  {% for posts in object_list %}
-    <div class="posts-entry">
-        <h2><a href="{% url 'post_detail' posts.pk %}">{{ posts.title }}</a></h2>
-        <p>{{ posts.body }}</p>
-        {% endfor %}
-    </div>
-    <div>
-{% if user.is_authenticated %}
-<p>Hi {{ user.username }}! You are {{ user.age }} years old.</p>
-<p><a href="{% url 'logout' %}">Log Out</a></p>
-{% else %}
-<p>You are not logged in.</p>
-<a href="{% url 'login' %}">Log In</a>
-<a href="{% url 'login' %}">Sign Up</a>
-{% endif %}
-    
-    {% endblock content %}
+{% endblock content %}
