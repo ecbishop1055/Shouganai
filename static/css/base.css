@@ -19,7 +19,7 @@ body {
     
 }
 
-header {
+/* header {
     padding-left: .5px;
     padding-right: 20px;
     border-bottom: 1px solid #999;
@@ -27,7 +27,7 @@ header {
     display: flex;
     background-color:#4AD3CF;
     align-items: center;
-}
+} */
 
 .nav-left {
     margin-right: auto;
@@ -70,8 +70,8 @@ post-entry h2{
 }
 
 .logo {
-    height: 10rem;
-    width: 15rem;
+    height: 5rem;
+    width: 5rem;
 }
 
 .myButton {
