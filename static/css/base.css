@@ -19,7 +19,6 @@ body {
     
 }
 
-<<<<<<< HEAD
 body::-webkit-scrollbar {
     width: 0.30rem;
   }
@@ -32,10 +31,7 @@ body::-webkit-scrollbar-thumb {
     background: #6649b8;
   }
 
-header {
-=======
 /* header {
->>>>>>> 1646ca88f9718215f83d888012cd199cfe3b44f7
     padding-left: .5px;
     padding-right: 20px;
     border-bottom: 1px solid #999;
