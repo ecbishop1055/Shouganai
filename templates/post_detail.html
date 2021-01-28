@@ -4,7 +4,16 @@
 {% block content %}
 <div class="posts-entry">
     <h2>{{ posts.title }}</h2>
+    <img height="400" width="500" src="{{ posts.post_image.url }}">
     <p>{{ posts.body }}</p>
+    <p>{{ posts.author }}</p>
+    <div class="card">
+            <img height="100" width="100" class="card-image-top" src="{{ posts.author.profile.profile_pic.url}}">
+        <div class="card-body">
+    <p>{{ posts.author.profile.bio }}</p>
+    </div>
+    
+    </div>
     <h2>Comments...</h2>
     <div class="">
     {% if not posts.comments.all %}
