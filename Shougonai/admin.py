@@ -4,7 +4,7 @@ from django.contrib.auth.admin import UserAdmin
 
 
 # Register your models here.
-from .models import Posts, Comment
+from .models import Posts, Comment, Profile
 
 class CommentInline(admin.TabularInline):
     model = Comment
@@ -20,3 +20,4 @@ class PostsAdmin(admin.ModelAdmin):
 
 admin.site.register(Posts, PostsAdmin)
 admin.site.register(Comment)
+admin.site.register(Profile)
