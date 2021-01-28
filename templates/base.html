@@ -2,7 +2,7 @@
 {% load static %}
 <html lang="en">
   <head>
-    
+    <script defer src="theme.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100&display=swap"
@@ -18,7 +18,7 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body class="dark">
     <div>
       <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -30,18 +30,27 @@
           <div class="collapse navbar-collapse" id="navbarColor02">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item active">
-                <a class="nav-link" href="#">Home
-                  <span class="sr-only">(current)</span>
-                </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
+                <a class="nav-link" href="#">Profile</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
+                <a class="nav-link" href="#">Create Post</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" href="#">Friends</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Popular</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Help</a>
+              </li>
+              <!--<li class="nav-item">
+                <a class="nav-link" href="#">Settings</a>
+              </li> -->
+              <li class="nav-item" id="themebutton">
+                <a href="#" class="nav-link"></a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
