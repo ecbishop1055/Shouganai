@@ -19,6 +19,18 @@ body {
     
 }
 
+body::-webkit-scrollbar {
+    width: 0.30rem;
+  }
+  
+body::-webkit-scrollbar-track {
+    background: #1e1e24;
+  }
+  
+body::-webkit-scrollbar-thumb {
+    background: #6649b8;
+  }
+
 /* header {
     padding-left: .5px;
     padding-right: 20px;
@@ -95,5 +107,3 @@ post-entry h2{
 	position:relative;
 	top:1px;
 }
-
-        
