@@ -33,12 +33,7 @@ class Comment(models.Model):
 class Profile(models.Model):
     user = models.OneToOneField('accounts.CustomUser', null=True, on_delete=models.CASCADE)
     bio = models.TextField()
-<<<<<<< HEAD
-    # profile = 
-    profile_pic = models.ImageField(null=True, blank=True, upload_to="images/")
-=======
     profile_pic = models.ImageField(null=True, blank=True, upload_to="media/images/")
->>>>>>> 3904999db2e2ed01ed327e3527072cbf965d2f62
     github = models.CharField(max_length=255, null=True, blank=True)
 
     def __str__(self):
