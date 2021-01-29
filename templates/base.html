@@ -3,10 +3,6 @@
 <html lang="en">
   <head>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100&display=swap"
-      rel="stylesheet"
-    />
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="{% static 'images/logo.png' %}" />
     <title>Shouganai</title>
@@ -46,10 +42,10 @@
                 <a class="nav-link" href="{% url 'edit_profile' %}">Edit Profile</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
+                <a class="nav-link" href="#">Post Something</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" href="{% url 'post_new' %}">+ Post Something</a>
               </li>
               {% if user.is_authenticated %}
               <li class="nav-item dropdown">
@@ -86,9 +82,6 @@
             </form>
           </div>
         </nav>
-        <div class="nav-right">
-          <a href="{% url 'post_new' %}">+ New Blog Post</a>
-        </div>
       </header>
       {% block content %} {% endblock content %}
     </div>
