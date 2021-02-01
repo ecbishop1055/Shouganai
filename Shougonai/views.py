@@ -3,7 +3,7 @@ from django.shortcuts import render
 from django.views.generic import ListView, DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
-from .models import Posts
+from .models import Posts, Profile
 # Create your views here.
 class BlogListView(LoginRequiredMixin, ListView):
     model = Posts
@@ -16,7 +16,7 @@ class BlogDetailView(LoginRequiredMixin, DetailView):
 class BlogCreateView(LoginRequiredMixin, CreateView):
     model = Posts
     template_name = 'post_new.html'
-    fields = ['title', 'body']
+    fields = ['title', 'post_image', 'body']
 
     def form_valid(self, form): 
         form.instance.author = self.request.user
@@ -39,3 +39,7 @@ class BlogDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     def test_func(self):
         obj = self.get_object()
         return obj.author == self.request.user
+
+class UserDetailView(LoginRequiredMixin, DetailView):
+    model = Profile
+    template_name = 'profile.html'
