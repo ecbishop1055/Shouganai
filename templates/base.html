@@ -14,7 +14,7 @@
       rel="stylesheet"
     />
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
   </head>
   <body class="dark">
     <div>
@@ -35,17 +35,17 @@
 
           <div class="collapse navbar-collapse" id="navbarColor02">
             <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-              </li>
+              <li class="nav-item active"></li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Profile</a>
-                <a class="nav-link" href="#"
-                  >
+                <a class="nav-link" href="#">
                   <span class="sr-only">(current)</span>
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'edit_profile' %}">Edit Profile</a>
+                <a class="nav-link" href="{% url 'edit_profile' %}"
+                  >Edit Profile</a
+                >
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'post_new' %}">Create Post</a>
@@ -62,9 +62,6 @@
               <!--<li class="nav-item">
                 <a class="nav-link" href="#">Settings</a>
               </li> -->
-              <li class="nav-item" id="themebutton">
-                <a href="#" class="nav-link"></a>
-              </li>
               {% if user.is_authenticated %}
               <li class="nav-item dropdown">
                 <a
