@@ -1,9 +1,10 @@
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView, DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 from .models import Posts, Profile
+from django.contrib.auth.models import User
 # Create your views here.
 class BlogListView(LoginRequiredMixin, ListView):
     model = Posts
@@ -39,7 +40,3 @@ class BlogDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     def test_func(self):
         obj = self.get_object()
         return obj.author == self.request.user
-
-class view_profile(LoginRequiredMixin):
-    model = Profile
-    template_name = 'profile.html'
