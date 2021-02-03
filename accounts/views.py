@@ -20,5 +20,6 @@ class UserEditView(generic.UpdateView):
     def get_object(self):
         return self.request.user
 
+
         
    
