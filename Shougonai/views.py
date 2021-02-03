@@ -40,3 +40,8 @@ class BlogDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     def test_func(self):
         obj = self.get_object()
         return obj.author == self.request.user
+
+class view_profile(LoginRequiredMixin, DetailView):
+    model = Profile
+    template_name = 'profile.html'
+    
