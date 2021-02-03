@@ -139,7 +139,13 @@ LOGOUT_REDIRECT_URL = 'home'
 
 AUTH_USER_MODEL = 'accounts.CustomUser'
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+DEFAULT_FROM_EMAIL = 'shouganaiforums@gmail.com'
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_HOST_USER = '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'
+EMAIL_HOST_PASSWORD = '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'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'Shougonai/media')
