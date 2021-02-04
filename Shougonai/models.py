@@ -34,6 +34,7 @@ class Profile(models.Model):
     user = models.OneToOneField('accounts.CustomUser', null=True, on_delete=models.CASCADE)
     bio = models.TextField()
     profile_pic = models.ImageField(null=True, blank=True, upload_to="media/images/")
+    profile_background = models.ImageField(null=True, blank=True, upload_to="media/images/")
     github = models.CharField(max_length=255, null=True, blank=True)
 
     def __str__(self):
