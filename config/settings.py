@@ -147,5 +147,6 @@ EMAIL_HOST_PASSWORD = 'SG.aSP4NgRzQkG7ndf4xnwWIQ.dg36OkAc-k-vG6pVFSzgjcEvNwRK8NT
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
+CRISPY_TEMPLATE_PACK = 'boostrap4'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'Shougonai/media')
