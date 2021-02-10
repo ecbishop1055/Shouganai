@@ -1,39 +1,36 @@
-
-html{
-    background-color: #B31945;
+html {
+  background-color: #b31945;
 }
-header h1 a{
-    color: red;
-    text-decoration: none;
+
+header h1 a {
+  color: red;
+  text-decoration: none;
 }
 
 .form-specific {
-    color: white;
+  color: white;
 }
 
 body {
-    text-align: center;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 18px;
-    background-color: #03243A;
-    
+  text-align: center;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 18px;
+  background-color: #03243a;
 }
 
 body::-webkit-scrollbar {
-    width: 1rem;
-  }
-  
+  width: .3rem !important;
+}
+
 body::-webkit-scrollbar-track {
-    background: #1e1e24;
-    box-shadow: inset 0 0 6p rgba(0, 0, 0, 0.3);
-  }
-  
+  background: #1e1e24 !important;
+  box-shadow: inset 0 0 6p rgba(0, 0, 0, 0.3) !important;
+}
+
 body::-webkit-scrollbar-thumb {
-    background: #DCDDE5;
-    outline: 1px solid slategrey;
-  }
-
-
+  background: #b31945 !important;
+  outline: 1px solid slategrey !important;
+}
 
 /* header {
     padding-left: .5px;
@@ -46,122 +43,92 @@ body::-webkit-scrollbar-thumb {
 } */
 
 .nav-left {
-    margin-right: auto;
+  margin-right: auto;
 }
 
 .nav-right {
-    display: flex;
-    padding-top: 2rem;
+  display: flex;
+  padding-top: 2rem;
 }
 
 .nav-item {
-    width: 100%;
-    overflow: none;
-    height: auto;
+  width: 100%;
+  overflow: none;
+  height: auto;
 }
 
 .nav-link {
-    float: left; /*Leaves scroll bar under popular*/
-    padding: 12px;
-    text-decoration: none;
-    font-size: 11px;
-    width: 25%;
-    text-align: center;
+  float: left; /*Leaves scroll bar under popular*/
+  padding: 12px;
+  text-decoration: none;
+  font-size: 11px;
+  width: 25%;
+  text-align: center;
 }
 
 .posts-entry {
-    margin: 1.5rem auto;
-    padding: 1rem;
-    max-width: 40rem;
-    background-color: white;
-    border: 1rem black; 
-    
+  margin: 1.5rem auto;
+  padding: 1rem;
+  max-width: 40rem;
+  background-color: white;
+  border: 1rem black;
 }
 
-.post-entry :hover{
-    background-color:  rgb(13, 77, 102);
+.post-entry :hover {
+  background-color: rgb(13, 77, 102);
 }
-post-entry h2{
-    margin: 0.5rem 0;
+post-entry h2 {
+  margin: 0.5rem 0;
 }
 
 .post-entry h2 a,
 .post-entry h2 a:visited {
-    color: blue;
-    text-decoration: none;
+  color: blue;
+  text-decoration: none;
 }
 
 .post-entry p {
-    margin: 0;
-    font-weight: 400;
+  margin: 0;
+  font-weight: 400;
 }
 
 .post-entry h2 a:hover {
-    color: red;
+  color: red;
 }
 
 .logo {
-    height: 5rem;
-    width: 5rem;
+  height: 5rem;
+  width: 5rem;
 }
 
 .myButton {
-	box-shadow:inset 0px -3px 7px 0px #164d66;
-	background-color:#03243a;
-	border-radius:3px;
-	border:1px solid #ffffff;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:15px;
-	padding:9px 23px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #263666;
+  box-shadow: inset 0px -3px 7px 0px #164d66;
+  background-color: #03243a;
+  border-radius: 3px;
+  border: 1px solid #ffffff;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 15px;
+  padding: 9px 23px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #263666;
 }
 .myButton:hover {
-	background-color:#279ff0;
+  background-color: #279ff0;
 }
 .myButton:active {
-	position:relative;
-	top:1px;
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --text-color: #b6b6b6;
-        --background: #ececec;
-    }
-}
-
-@media (prefers-color-scheme: light) {
-    :root {
-        --text-color: #1f1f1f;
-        --background: #000000
-    }
+  position: relative;
+  top: 1px;
 }
 
 body {
-    color: var(--text-color);
-    background: var(--background);
+  color: var(--text-color);
+  background: var(--background);
 }
 
 .dark {
-    --text-color: #b6b6b6;
-    --background: #ececec;
-}
-
-.light{
-    --text-color: #1f1f1f;
-    --background: #000000;
-}
-
-.solar {
-    --textcolor: #576e75;
-    --background: #fdf6e3;
-}
-
-body {
-    color: var(--text-color);
-    background: var(--background);
+  --text-color: #b6b6b6;
+  --background: #ececec;
 }
