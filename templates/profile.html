@@ -1,9 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
 {% if user.is_authenticated %}
+
 <style>
   body {
-    background-image: url("{{ profile.profile_background.url }}");
+    background-image: url("{{ object.profile_background.url }}");
   }
   </style>
     <div class="content-section">

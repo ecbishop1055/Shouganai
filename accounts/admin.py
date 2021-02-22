@@ -14,6 +14,6 @@ class CustomUserAdmin(UserAdmin):
         (None, {'fields': ('age',)}),
     )
     add_fieldsets = UserAdmin.add_fieldsets + (
-        (None, {'fields': ('age',)}),
+        (None, {'fields': ('email', 'age', 'profile_pic', 'bio', 'profile_background',)}),
     )
 admin.site.register(CustomUser, CustomUserAdmin)

@@ -8,9 +8,9 @@
     <p><a href="{% url 'logout' %}">Log Out</a></p>
 <h1>Users</h1>
 
-      {% for user in object_list %}
-        <h2>{{ user.username }}</h2>
-        <h3>{{ user.graduation_date }}</h3>
+      {% for object in object_list %}
+        <a href="{% url 'profile' object.pk %}"><h2>{{ user.username }}</h2></a>
+        <h3>{{ object.username }}</h3>
       {% endfor %}
 {% endif %}
 {% endblock content %}

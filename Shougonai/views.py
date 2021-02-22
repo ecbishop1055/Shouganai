@@ -43,7 +43,7 @@ class BlogDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
         return obj.author == self.request.user
 
 class view_profile(LoginRequiredMixin, DetailView):
-    model = Profile
+    model = CustomUser
     template_name = 'profile.html'
 
 class Users_View(LoginRequiredMixin, ListView):
